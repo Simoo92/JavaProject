@@ -37,13 +37,17 @@ public class ContoCorrente {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("ContoCorrente [saldo=");
+		builder.append("ContoCorrente saldo=");
 		builder.append(saldo);
 		builder.append(", titolari=");
-		builder.append(titolari);
+		
+		
+		for (Cliente cliente : titolari) {
+			builder.append(cliente);
+		}
 		builder.append(", numeroConto=");
 		builder.append(numeroConto);
-		builder.append("]");
+		
 		return builder.toString();
 	}
 

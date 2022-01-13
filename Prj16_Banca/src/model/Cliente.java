@@ -1,15 +1,26 @@
 package model;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+
 public class Cliente {
 	
 	private String nome;
 	private String cognome;
 	private int età;
+	private LocalDate dataNascita;
 	
-	public Cliente(String nome, String cognome, int età) {
+	public Cliente(String nome, String cognome, String data) {
 		this.nome = nome;
 		this.cognome = cognome;
-		this.età = età;
+		this.dataNascita = LocalDate.parse(data);
+		
+		
+		LocalDate stop = LocalDate.now(ZoneId.of("Europe/Rome"));
+		long years = java.time.temporal.ChronoUnit.MONTHS.between(dataNascita, stop);
+		
+		
+		this.età = (int) years;
 	}
 
 	public String getNome() {
@@ -39,13 +50,14 @@ public class Cliente {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Cliente [nome=");
+		builder.append("Cliente nome=");
 		builder.append(nome);
 		builder.append(", cognome=");
 		builder.append(cognome);
 		builder.append(", età=");
 		builder.append(età);
-		builder.append("]");
+		
+		
 		return builder.toString();
 	}
 	

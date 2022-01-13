@@ -10,7 +10,7 @@ public class DemoBanca {
 
 		GestioneConti gc = new GestioneConti();
 		
-		gc.addCliente("Christian", "De La Fuente", 22);
+		gc.addCliente("Christian", "De La Fuente", "1999-05-31");
 	
 		
 		Cliente c = gc.getCliente("Christian", "De La Fuente");
@@ -27,6 +27,8 @@ public class DemoBanca {
 		gc.faiPrelievo(250, conto);
 		
 		System.out.println(conto);
+		
+	
 		
 	}
 

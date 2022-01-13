@@ -8,11 +8,11 @@ public class GestioneConti {
 
 	public void apriConto(Cliente c) {
 		ContoCorrente cc = new ContoCorrente(c);
-		DB.getConti().add(cc); //
+		DB.getConti().add(cc); 
 	}
 
-	public void addCliente(String nome, String cognome, int età) {
-		Cliente c = new Cliente(nome, cognome, età);
+	public void addCliente(String nome, String cognome, String data) {
+		Cliente c = new Cliente(nome, cognome, data);
 		DB.getClienti().add(c);
 	}
 
