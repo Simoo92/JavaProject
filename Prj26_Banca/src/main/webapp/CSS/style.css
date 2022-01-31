@@ -1,0 +1,19 @@
+ul.menu {
+width: 100%; height: 50px; background-color: gray;
+list-style: none; 
+padding: 5px;
+justify-content: left;
+display: flex;
+}
+ul.menu li{
+    text-indent: none;
+    margin-right: 10px;
+}
+ul.menu li a:hover{
+    color:yellowgreen;
+}
+ul.menu li a{
+    color: white;
+    font-size: 1.3em;
+    text-decoration: none;
+}
